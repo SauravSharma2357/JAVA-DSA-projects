@@ -47,8 +47,8 @@ public class Email {
 		String passwordSet = "ABCDEFGHIJKLMNOPRSTUVWXYZ0123456789!@#$%";
 		char[] password = new char[length];
 		for(int i=0;i<length;i++) {
-			int rand = (int) (Math.random() * passwordSet.length());
-			password[i] = passwordSet.charAt(rand);
+			int rand = (int) (Math.random() * passwordSet.length()); // math.random gives a random number between 0 and 1, so multiplying it by the length of passwordset
+			password[i] = passwordSet.charAt(rand);					//	length we are choosing a random number between 0 to the length of our string.
 		}
 		return new String(password);
 	}

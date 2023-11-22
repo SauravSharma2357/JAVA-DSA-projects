@@ -11,7 +11,7 @@ public class Student {
 	private String courses = "";
 	private int tuitionBalance = 0;
 	private static int costOfCourse = 600;
-	private static int id = 1000;
+	private static int id = 1000; 			// static means it is true for the class so that when we add another student it won't reset it to default value;
 	
 	//Constructo: prompt user to enter student's name and year
 	public Student() {
@@ -44,7 +44,7 @@ public class Student {
 		do {
 			System.out.print("Enter course to enroll (Q to qquit): ");
 			Scanner in = new Scanner(System.in);
-			String course = in.nextLine();
+			String course = in.nextLine(); 						//to store string inputs
 			if(!course.equals("Q")) {
 				courses = courses + "\n  " + course;
 				tuitionBalance = tuitionBalance + costOfCourse;
